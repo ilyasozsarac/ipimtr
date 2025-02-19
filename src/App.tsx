@@ -26,19 +26,19 @@ function App() {
   useEffect(() => {
     const fetchIPInfo = async () => {
       try {
-        const response = await axios.get('http://ip-api.com/json');
+        const response = await axios.get('https://ipapi.co/json/');
         const userAgent = window.navigator.userAgent;
         setRawData(response.data); // Store raw data
         setIpInfo({
-          ip: response.data.query,
+          ip: response.data.ip,
           browser: userAgent,
-          location: `${response.data.city}, ${response.data.country}`,
-          isp: response.data.isp,
-          region: response.data.regionName,
-          postal: response.data.zip,
+          location: `${response.data.city}, ${response.data.country_name}`,
+          isp: response.data.org,
+          region: response.data.region,
+          postal: response.data.postal,
           timezone: response.data.timezone,
-          latitude: response.data.lat,
-          longitude: response.data.lon,
+          latitude: response.data.latitude,
+          longitude: response.data.longitude,
         });
       } catch (error) {
         console.error('Error fetching IP info:', error);
@@ -88,16 +88,17 @@ function App() {
   );
 
   const excludedKeys = [
-    'status',
-    'query',
+    'ip',
+    'org',
+    'city',
+    'region',
+    'postal',
+    'timezone',
+    'latitude',
+    'longitude',
+    'country_name',
     'browser',
     'location',
-    'isp',
-    'regionName',
-    'timezone',
-    'lat',
-    'lon',
-    'as',
   ];
 
   const additionalInfoData = rawData
