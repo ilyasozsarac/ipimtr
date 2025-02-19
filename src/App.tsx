@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     const fetchIPInfo = async () => {
       try {
-        const response = await axios.get('https://ip-api.com/json');
+        const response = await axios.get('http://ip-api.com/json');
         const userAgent = window.navigator.userAgent;
         setRawData(response.data); // Store raw data
         setIpInfo({
