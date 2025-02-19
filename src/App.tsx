@@ -112,7 +112,7 @@ function App() {
       <header className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400" style={{ fontWeight: 'bold' }}>
-            ipim.trrrrr
+            IPim.tr
           </h1>
         </div>
       </header>
