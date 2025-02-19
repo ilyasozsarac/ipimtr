@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
     const fetchIPInfo = async () => {
       try {
-        const response = await axios.get('http://ip-api.com/json');
+        const response = await axios.get('https://ip-api.com/json');
         const userAgent = window.navigator.userAgent;
         setRawData(response.data); // Store raw data
         setIpInfo({
@@ -111,7 +111,7 @@ function App() {
       <header className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400" style={{ fontWeight: 'bold' }}>
-            ipim.tr
+            ipim.trrrrr
           </h1>
         </div>
       </header>
