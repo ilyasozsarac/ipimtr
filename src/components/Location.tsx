@@ -10,7 +10,7 @@ interface LocationProps {
 const Location: React.FC<LocationProps> = ({ location, region, postal, timezone }) => {
   return (
     <div>
-      <h3 className="text-lg font-medium text-gray-700 mb-2">Location Details</h3>
+      <h3 className="font-medium text-gray-500 text-base" style={{ fontWeight: 'bold' }}>Location Details</h3>
       <p className="text-2xl font-bold text-gray-800 mb-4">{location}</p>
       <div className="space-y-2">
         <div>

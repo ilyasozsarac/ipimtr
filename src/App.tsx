@@ -62,7 +62,7 @@ function App() {
     >
       <div className="flex flex-col space-y-2">
         <div className="flex justify-between items-start">
-          <h3 className={`font-medium ${isIP ? 'text-blue-600 text-lg' : 'text-gray-500 text-base'}`} style={{ fontWeight: 'bold' }}>
+          <h3 className="text-lg font-semibold text-gray-700">
             {label}
           </h3>
           <div className="relative">
