@@ -78,7 +78,7 @@ export const Map: React.FC<MapProps> = ({ latitude, longitude }) => {
         mapTypeId='roadmap'
       >
         <Marker
-    icon="http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+    icon="https://maps.google.com/mapfiles/ms/icons/red-dot.png"
     key="1"
     position={center}
    />
