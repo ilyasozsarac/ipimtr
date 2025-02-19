@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/ipimtr/static/css/main.2a39de6c.css",
+    "main.js": "/ipimtr/static/js/main.3293aba9.js",
+    "static/js/206.a65f9826.chunk.js": "/ipimtr/static/js/206.a65f9826.chunk.js",
+    "index.html": "/ipimtr/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.2a39de6c.css",
+    "static/js/main.3293aba9.js"
+  ]
+}
