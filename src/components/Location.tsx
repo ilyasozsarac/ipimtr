@@ -5,28 +5,28 @@ interface LocationProps {
   region: string;
   postal: string;
   timezone: string;
+  localTime: string;
 }
 
-const Location: React.FC<LocationProps> = ({ location, region, postal, timezone }) => {
+const Location: React.FC<LocationProps> = ({ location, region, postal, timezone, localTime }) => {
   return (
-    <div>
-      <h3 className="font-medium text-gray-500 text-base" style={{ fontWeight: 'bold' }}>Location Details</h3>
-      <p className="text-2xl font-bold text-gray-800 mb-4">{location}</p>
-      <div className="space-y-2">
-        <div>
-          <span className="text-gray-500">Region:</span>
-          <span className="ml-2 text-gray-700">{region}</span>
-        </div>
-        <div>
-          <span className="text-gray-500">Postal Code:</span>
-          <span className="ml-2 text-gray-700">{postal}</span>
-        </div>
-        <div>
-          <span className="text-gray-500">Timezone:</span>
-          <span className="ml-2 text-gray-700">{timezone}</span>
-        </div>
+    <div className="space-y-4">
+      <div>
+        <h3 className="text-lg font-semibold text-gray-700 mb-2">Location</h3>
+        <p className="text-gray-600">{location}</p>
       </div>
-      <div className="mt-4 text-sm text-gray-500">
+      <div>
+        <h3 className="text-lg font-semibold text-gray-700 mb-2">Region</h3>
+        <p className="text-gray-600">{region}</p>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-gray-700 mb-2">Postal Code</h3>
+        <p className="text-gray-600">{postal}</p>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-gray-700 mb-2">Time Zone</h3>
+        <p className="text-gray-600">{timezone}</p>
+        <p className="text-sm text-gray-500 mt-1">{localTime}</p>
       </div>
     </div>
   );
