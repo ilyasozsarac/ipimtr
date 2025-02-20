@@ -111,9 +111,30 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <header className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400" style={{ fontWeight: 'bold' }}>
-            IPim.tr
-          </h1>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+            <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
+              IPim.tr
+            </h1>
+            <nav>
+              <ul className="flex space-x-8">
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200">
+                    IP LOOKUP
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200">
+                    TCP PORTS
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200">
+                    TOOLS
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </header>
 
