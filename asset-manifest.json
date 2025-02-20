@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/ipimtr/static/css/main.2a39de6c.css",
-    "main.js": "/ipimtr/static/js/main.9f580746.js",
+    "main.css": "/ipimtr/static/css/main.09f18796.css",
+    "main.js": "/ipimtr/static/js/main.7890de29.js",
     "static/js/206.a65f9826.chunk.js": "/ipimtr/static/js/206.a65f9826.chunk.js",
     "index.html": "/ipimtr/index.html"
   },
   "entrypoints": [
-    "static/css/main.2a39de6c.css",
-    "static/js/main.9f580746.js"
+    "static/css/main.09f18796.css",
+    "static/js/main.7890de29.js"
   ]
 }
