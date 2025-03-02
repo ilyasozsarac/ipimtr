@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import IpLookup from './pages/IpLookup';
+import TcpPorts from './pages/TcpPorts';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/ports" className={({ isActive }) => 
+                    <NavLink to="/tcp-ports" className={({ isActive }) => 
                       `text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200 ${isActive ? 'text-blue-600' : ''}`
                     }>
                       TCP PORTS
@@ -47,6 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lookup" element={<IpLookup />} />
+          <Route path="/tcp-ports" element={<TcpPorts />} />
         </Routes>
 
         <footer className="bg-white shadow-sm mt-8">
