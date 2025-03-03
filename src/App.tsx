@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-rou
 import Home from './pages/Home';
 import IpLookup from './pages/IpLookup';
 import TcpPorts from './pages/TcpPorts';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+
 
 function App() {
   return (
