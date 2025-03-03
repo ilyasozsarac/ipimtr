@@ -2,7 +2,7 @@
   "name": "ipimtr",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ilyasozsarac.github.io/ipimtr",
+  "homepage": "https://ipimtr.onrender.com",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@react-google-maps/api": "^2.20.6",
