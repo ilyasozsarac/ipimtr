@@ -41,25 +41,32 @@ const Home: React.FC = () => {
   const [rawData, setRawData] = useState<any | null>(null);
   const [copied, setCopied] = useState<string>('');
 
-  useEffect(() => {
-    const fetchIPInfo = async () => {
-      try {
-        const response = await getIpInfo();
-        const userAgent = window.navigator.userAgent;
-        setRawData(response.data);
-        setIpInfo({
-          ip: response.data.ip,
-          browser: userAgent,
-          location: response.data.location,
-          company: response.data.company,
-          asn: response.data.asn,
-          abuse: response.data.abuse
-        });
-      } catch (error) {
-        console.error('Error fetching IP info:', error);
-      }
-    };
+  const fetchUserIp = async () => {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    return data.ip; // Kullanıcının IP adresini döndürür
+  };
 
+  const fetchIPInfo = async () => {
+    try {
+      const userIp = await fetchUserIp(); // Kullanıcının IP adresini al
+      const response = await getIpInfo(userIp); // IP adresini parametre olarak geçin
+      const userAgent = window.navigator.userAgent;
+      setRawData(response.data);
+      setIpInfo({
+        ip: response.data.ip,
+        browser: userAgent,
+        location: response.data.location,
+        company: response.data.company,
+        asn: response.data.asn,
+        abuse: response.data.abuse
+      });
+    } catch (error) {
+      console.error('Error fetching IP info:', error);
+    }
+  };
+
+  useEffect(() => {
     fetchIPInfo();
   }, []);
 
