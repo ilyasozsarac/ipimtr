@@ -44,8 +44,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const fetchIPInfo = async () => {
       try {
-        const userIp = await axios.get('https://api.ipify.org?format=json');
-        const response = await getIpInfo(userIp.data.ip);
+        const response = await getIpInfo();
         const userAgent = window.navigator.userAgent;
         setRawData(response.data);
         setIpInfo({

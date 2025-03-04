@@ -19,17 +19,6 @@ const axiosInstance = axios.create({
   }
 });
 
-app.get('/api/ip/:ip', async (req, res) => {
-  const userIp = req.params.ip;
-  try {
-    const response = await axios.get(`http://ip-api.com/json/${userIp}`);
-    res.json(response.data);
-  } catch (error) {
-    console.error('Error fetching IP info from ip-api.com:', error);
-    res.status(500).json({ error: 'Failed to fetch IP info' });
-  }
-});
-
 app.get('/api/ip/:ip?', async (req: Request, res: Response) => {
   try {
     const ip = req.params.ip || '';
